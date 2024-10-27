@@ -34,7 +34,7 @@ $fornecedores = $con->query("SELECT forn_id, forn_nome, forn_email, forn_tel, fo
 
                 <div class="hidden md:flex space-x-4 pr-10" id="navbar-links">
                     <a href="fornecedores_crud/create.php" class="text-white text-2xl">Fornecedor</a>
-                    <a href="produtos_crud/create.php" class="text-white text-2xl">Produtos</a>
+                    <a href="../produtos_crud/create.php" class="text-white text-2xl">Produtos</a>
                 </div>
             </div>
         </nav>

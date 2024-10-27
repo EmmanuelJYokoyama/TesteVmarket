@@ -66,6 +66,10 @@ th {
     padding-top: 5ch;
 }
 
+#btnExclude{
+    display: none;
+}
+
 form {
     display: block;
     margin-top: 15px;

@@ -37,18 +37,20 @@ if (!$fornecedores) {
                 <a href="../../public/index.php" class="text-white text-4xl font-bold">HOME</a>
 
                 <div class="hidden md:flex space-x-4 pr-10" id="navbar-links">
-                    <a href="fornecedores_crud/create.php" class="text-white text-2xl">Fornecedor</a>
+                    <a href="../fornecedores_crud/create.php" class="text-white text-2xl">Fornecedor</a>
                     <a href="produtos_crud/create.php" class="text-white text-2xl">Produtos</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <header>
-        <h1>Novo Produto</h1>
-    </header>
+
 
     <main>
+
+        <header>
+            <h1>Novo Produto</h1>
+        </header>
         <form method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Nome" required>

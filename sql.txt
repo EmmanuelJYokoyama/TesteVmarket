@@ -1,0 +1,22 @@
+CREATE DATABASE vmarket_teste;
+
+USE vmarket_teste;
+
+CREATE TABLE fornecedores (
+    forn_id INT AUTO_INCREMENT PRIMARY KEY,
+    forn_nome VARCHAR(50) NOT NULL,
+    forn_email VARCHAR(50),
+    forn_tel VARCHAR(20),
+    forn_end VARCHAR(50)
+);
+
+CREATE TABLE produtos (
+    prod_id INT AUTO_INCREMENT PRIMARY KEY,
+    prod_nome VARCHAR(50) NOT NULL,
+    prod_desc VARCHAR(100),
+    preco DECIMAL(10, 2) NOT NULL,
+    fornecedor_id INT,
+    fornecedor_nome VARCHAR(50),
+    FOREIGN KEY (fornecedor_id) REFERENCES fornecedores(forn_id) ON DELETE SET NULL
+);
+
