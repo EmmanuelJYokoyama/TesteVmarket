@@ -11,5 +11,4 @@
         die("Conexão falhou: " . $con->connect_error);
     }
 
-
 ?>  
