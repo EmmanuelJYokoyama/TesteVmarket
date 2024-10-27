@@ -1,12 +1,11 @@
 <?php
     $host = 'localhost'; 
-    $db   = 'teste_crud';
+    $db = 'vmarket_teste';
     $user = 'root'; 
     $port = '3306';
-    $pass = ''; 
+    $senha = ''; 
 
-
-    $con = new mysqli($host, $user, $pass, $db, $port);
+    $con = new mysqli($host, $user, $senha, $db, $port);
 
     if ($con->connect_error) {
         die("Conexão falhou: " . $con->connect_error);
