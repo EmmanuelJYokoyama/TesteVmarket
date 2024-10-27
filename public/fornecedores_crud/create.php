@@ -1,18 +1,18 @@
 <?php
-include('../db_con.php');
+    include('../db_con.php');
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
-    $endereco = $_POST['endereco'];
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+        $endereco = $_POST['endereco'];
 
-    $con->query("INSERT INTO fornecedores (forn_nome, forn_email, forn_tel, forn_end) VALUES ('$nome', '$email', '$telefone', '$endereco')");
+        $con->query("INSERT INTO fornecedores (forn_nome, forn_email, forn_tel, forn_end) VALUES ('$nome', '$email', '$telefone', '$endereco')");
 
-    
-}
+        
+    }
 
-$fornecedores = $con->query("SELECT forn_id, forn_nome, forn_email, forn_tel, forn_end FROM fornecedores");
+    $fornecedores = $con->query("SELECT forn_id, forn_nome, forn_email, forn_tel, forn_end FROM fornecedores");
 ?>
 
 <!DOCTYPE html>

@@ -4,7 +4,7 @@
     if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST['produtos'])) {
         $produtosIds = $_POST['produtos'];
         $ids = '';
-        
+
         foreach ($produtosIds as $index => $id) {
             $ids .= $id;
             if ($index < count($produtosIds) - 1) {
@@ -21,4 +21,4 @@
         
     }
     
-    ?>
+?>

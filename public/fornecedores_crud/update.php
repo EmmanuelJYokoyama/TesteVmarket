@@ -1,20 +1,20 @@
 <?php
-include('../db_con.php');
-$id = $_GET['id'];
-$sql = $con->query("SELECT * FROM fornecedores WHERE forn_id = $id");
+    include('../db_con.php');
+    $id = $_GET['id'];
+    $sql = $con->query("SELECT * FROM fornecedores WHERE forn_id = $id");
 
-$fornecedor = $sql->fetch_assoc();
+    $fornecedor = $sql->fetch_assoc();
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nome = $_POST['forn_nome'];
-    $email = $_POST['forn_email'];
-    $telefone = $_POST['forn_tel'];
-    $endereco = $_POST['forn_end'];
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $nome = $_POST['forn_nome'];
+        $email = $_POST['forn_email'];
+        $telefone = $_POST['forn_tel'];
+        $endereco = $_POST['forn_end'];
 
-    $con->query("UPDATE fornecedores SET forn_nome='$nome', forn_email='$email', forn_tel='$telefone', forn_end='$endereco' WHERE forn_id = $id");
+        $con->query("UPDATE fornecedores SET forn_nome='$nome', forn_email='$email', forn_tel='$telefone', forn_end='$endereco' WHERE forn_id = $id");
 
-    header("Location: create.php");
-}
+        header("Location: create.php");
+    }
 ?>
 
 <!DOCTYPE html>
